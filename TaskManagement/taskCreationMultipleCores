@@ -1,0 +1,2 @@
+This is an example of how to create multiple task in FreeRTOS running on a CPU with multiple core
+This example is tested on ESP32F
