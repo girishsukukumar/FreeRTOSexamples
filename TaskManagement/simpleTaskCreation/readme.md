@@ -13,5 +13,23 @@ FREERTOS scheduler will keep switching, between the tasks.
  
  Task1
  
+ Task1
+
+ Task2
+ 
+ Task2 
+ 
+ Task2
+ 
+ Task2
  
  Task1
+ 
+ Task1 
+ 
+ Task1
+ 
+ Task1
+
+ 
+ 
