@@ -8,6 +8,10 @@ FREERTOS scheduler will keep switching, between the tasks.
 ## Output of program 
 
  Task1
+ 
  Task1 
+ 
  Task1
+ 
+ 
  Task1
