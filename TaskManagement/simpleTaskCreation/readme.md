@@ -5,7 +5,7 @@ the API xTaskCreate()
 When this program runs, the two tasks will be created and they  run in parellel on the same core, on a time shared basis.
 FREERTOS scheduler will keep switching, between the tasks. 
 ## How the task executes
-[logo]: https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/simpleTaskCreation/example1.jpg "Logo Title Text 2"
+
 ![alt text]([https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/simpleTaskCreation/example1.jpg])
 
 ## Output of program 
