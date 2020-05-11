@@ -34,7 +34,7 @@ To understand this, in previous example we will change the task priotiries and s
   "Logo Title Text 1") 
 
   
-  
+ ___ 
   
 ## Task1 is Given priority ONE and Task2 is given prioroty TWO
 ![Task2 > Task1 ]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/output2.jpg
