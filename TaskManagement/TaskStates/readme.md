@@ -61,6 +61,7 @@ vTaskDelay( pdMS_TO_TICKS( 100 ) )  will keep the task in BLOCKED STATE for 100m
 
 ![alt text](https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/TaskStates/ouput2.jpg "Logo Title Text 1")  Output
 
+## The above output proves that the 1 Tick Interrupt in ESP32 is equal to 1 Millisecond. 
 
 
 
