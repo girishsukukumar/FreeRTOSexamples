@@ -16,6 +16,10 @@ Like this there are many reasons why a task will be in a NOT RUNNING state. In t
 ## 4.1 How do we make two task of differnt priority run (with out causing starvation)
 The Solution to this problem of starvation is, in the world of Real time systems do not leave everything to control of scheduler. Becuase scheduler is like a very focused person just use priority and run.  Instead of scheduler driven we make all task as Event driven This means every task runs as a response to an event. An event may be interrupt or message send to the task or any IPC related events. So all the tasks will be waiting for a specfic event to happen to start execution. This is called *Event Driven Programming*. A task which is waiting for an event is called in *BLOCKED STATE* . A task can be in *BLOCKED STATE* while waiting for two types of events
 
-* Time related event (Waiting for delay to complete, Waiting for timer to expire etc)
-* Waiting for an interrupt of a some data to arrive through IPC
+* Time related event (Waiting for delay to complete, Waiting for timer to expire etc) (Also know as Temporal Events)
+* Waiting for an interrupt of a some data to arrive through IPC, they called Synchronization events
+
+Synchronization event in FreeRTOS are from, queues, binary semaphores, counting semaphores, mutexes, recursive mutexes, event groups and direct to task notifications.
+
+
 
