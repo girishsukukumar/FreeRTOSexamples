@@ -19,3 +19,7 @@ PRogrammers can  add application specific functionality directly into the idle t
  
 One of the common uses of idle task to find out free CPU/Processor Time. This is true with Windows too.  So if we get to know how many time the idle task function has been looped, we can get to know for how much time equivalent to ticks the CPU/processor was free. This is how it is done
 
+####In Arduino the loop() function is hooked to freeRtos, loop() function  will be called whenever the scheduler runs its Idle Task.
+
+
+
