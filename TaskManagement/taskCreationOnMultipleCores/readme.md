@@ -4,5 +4,5 @@ on ESP32F
 
 ## Output is as below
 
-![alt text]([https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/taskCreationOnMultipleCores/output.jpg])
+![Output]([https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/taskCreationOnMultipleCores/output.jpg])
 
