@@ -26,10 +26,10 @@ In the previous example we will change the task priotiries and see the differenc
 ![alt text]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/output.jpg
   "Logo Title Text 1")
   
-  ![alt text]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/output1.jpg
+![alt text]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/output1.jpg
   "Logo Title Text 1")
   
-  ![alt text]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/output2.jpg
+![alt text]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/output2.jpg
   "Logo Title Text 1")
 
 
