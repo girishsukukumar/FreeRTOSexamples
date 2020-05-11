@@ -38,5 +38,9 @@ Simillarly the API to put the task back in the list of scheduled task is *vTaskR
 
 This API is not used much only in special cases.
 
-##Ready State
+## Ready State
 Tasks that are in the Not Running state but are not Blocked or Suspended are said to be in the Ready state.  They are able to run, and therefore ‘ready’ to run, but are not currently in the Running state. 
+
+## State Transition Digaram
+
+![alt text](https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/TaskStates/state_Transition_digram.jpg "Logo Title Text 1")  State Transition Diagram
