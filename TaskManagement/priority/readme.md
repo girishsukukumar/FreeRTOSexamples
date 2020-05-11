@@ -29,6 +29,13 @@ To understand this, in previous example we will change the task priotiries and s
   "Logo Title Text 1") 
   The scheduler will always select the highest priority task that is able to run.  Task 1 has a higher priority than Task 2 and is always able to run; therefore, Task 1 is the only task to ever enter the Running state.  As Task 2 never enters the Running state, it never prints out its string.  Task 2 is said to be ‘starved’ of processing time by Task 1.  
   
+    
+![Task1 > Task2 ]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/different_priority.jpg
+  "Logo Title Text 1") 
+
+  
+  
+  
 ## Task1 is Given priority ONE and Task2 is given prioroty TWO
 ![Task2 > Task1 ]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/output2.jpg
   "Logo Title Text 1")
