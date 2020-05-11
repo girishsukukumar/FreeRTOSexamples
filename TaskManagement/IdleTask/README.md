@@ -16,3 +16,6 @@ Common uses for the Idle task hook include:
 PRogrammers can  add application specific functionality directly into the idle task through the use of an idle hook (or idle callback) function—a function that is called automatically by the idle task once per iteration of the idle task loop.  
 
  ## How to write a application specific hook function for idle Task
+ 
+One of the common uses of idle task to find out free CPU/Processor Time. This is true with Windows too.  So if we get to know how many time the idle task function has been looped, we can get to know for how much time equivalent to ticks the CPU/processor was free. This is how it is done
+
