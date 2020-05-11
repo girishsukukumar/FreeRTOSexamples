@@ -51,4 +51,8 @@ In the previous example we have used the arduino SDK api called ***. delay()*** 
 vTaskDelay() places the calling task into the Blocked state for a fixed number of tick interrupts.  The task does not use any processing time while it is in the Blocked state, so the task only uses processing time when there is actually work to be done. 
 
 vTaskDelay() takes only one parameter as its input which the number of "Ticks" by which the task has to be kept in the BLOCKED STATE.
-For example if call the api vTaskDelay(200) the task will remain in BLOCKED STATE for time period equivalent of 200 ticks. One tick in ESP is 
+For example if call the api vTaskDelay(200) the task will remain in BLOCKED STATE for time period equivalent of 200 ticks. One tick in ESP is  1 millisecond. Hence the tasks will remain in BLOCKED STATE for 200 milliseconds without taking any CPU cycles. There is a easy way to call vTaskDelay() where you convert the amount of time the task has to be blocked state to equivalent Ticks. The fucntion is 
+pdMS_TO_TICKS(). This API takes one input which is time in milliseconds and convert that into equivalent Ticks. Which can be used for providing the needed delay.
+
+For example 
+vTaskDelay( pdMS_TO_TICKS( 100 ) )  will keep the task in BLOCKED STATE for 100milliseconds
