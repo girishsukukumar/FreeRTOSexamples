@@ -48,3 +48,5 @@ Tasks that are in the Not Running state but are not Blocked or Suspended are sai
 ##  FreeRTOS API vTaskDelay() 
 In the previous example we have used the arduino SDK api called ***. delay()*** to temporarly put a task into BLOCKED STATE. The API that is recommeded by FreeRTOS for putting a task into BLOCKED STATE is  vTaskDelay() . The advantage of use  vTaskDelay()  is that we can specify delay is terms of Tick Interrupts, the periodic clock used by Scheduler to schedule tasks. This gives better control in the timing as we are depending the same clock used by the scheduler. But the salient point that need to keep in mind here is, it does not take the parameters in absolute time units like Seconds, milliseconds or Microseconds.
 
+vTaskDelay() places the calling task into the Blocked state for a fixed number of tick interrupts.  The task does not use any processing time while it is in the Blocked state, so the task only uses processing time when there is actually work to be done. 
+
