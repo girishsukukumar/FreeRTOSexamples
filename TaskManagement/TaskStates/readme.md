@@ -26,4 +26,5 @@ Let us see how to use a simple temporal event (time related) to over come starva
 Here the example where we added a small delay to both the tasks this allowed Task1 and Task2 to execute in an alternate fashion
 [Using Delay to solve starvation ](https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/TaskStates/TwoTaskDifferentPriorityTemporal.ino)
 
+![alt text](https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/taskCreationOnMultipleCores/output.jpg "Logo Title Text 1") Dual Core
 
