@@ -9,11 +9,11 @@ with priority 0 being the lowest priority possible.
 The range of available priorities is 0 to (configMAX_PRIORITIES – 1).  Any number of tasks can share the same 
 priority—ensuring maximum design flexibility. 
 
-'
+```
 #ifdef SMALL_TEST
 #define configMAX_PRIORITIES			( 7 )
 #else
 #define configMAX_PRIORITIES			( 25 )
 #endif
 
-'
+```
