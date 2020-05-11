@@ -23,13 +23,13 @@ The scheduler will always ensure that the highest priority task that is able to 
 
 In the previous example we will change the task priotiries and see the difference in outputs
 
-![alt text]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/output.jpg
+![Task1 > Task2 ]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/output.jpg
   "Logo Title Text 1")
   
-![alt text]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/output1.jpg
+![Task2 > Task1 ]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/output1.jpg
   "Logo Title Text 1")
   
-![alt text]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/output2.jpg
+![Task1 == Task2]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/output2.jpg
   "Logo Title Text 1")
 
 
