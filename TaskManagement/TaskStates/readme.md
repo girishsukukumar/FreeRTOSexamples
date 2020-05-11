@@ -13,4 +13,5 @@ That means we just two reason why a task does not run
 
 Like this there are many reasons why a task will be in a NOT RUNNING state. In this section we are going to see what the different reasons why as task is in not running state and based on which we will assign different states to the task.
 
-## 4.1 Not Running State.
+## 4.1 How do we make two task of differnt priority run (with out causing starvation)
+
