@@ -14,5 +14,8 @@ That means we just two reason why a task does not run
 Like this there are many reasons why a task will be in a NOT RUNNING state. In this section we are going to see what the different reasons why as task is in not running state and based on which we will assign different states to the task.
 
 ## 4.1 How do we make two task of differnt priority run (with out causing starvation)
-The Solution to this problem of starvation is, in the world of Real time systems do not leave everything to control of scheduler. Becuase scheduler is like a very focused person just use priority and run.  Instead of scheduler driven we make all task as Event driven This means every task runs as a response to an event. An event may be interrupt or message send to the task or any IPC related events. So all the tasks will be waiting for a specfic event to happen to start execution. This is called *Event Driven Programming* 
+The Solution to this problem of starvation is, in the world of Real time systems do not leave everything to control of scheduler. Becuase scheduler is like a very focused person just use priority and run.  Instead of scheduler driven we make all task as Event driven This means every task runs as a response to an event. An event may be interrupt or message send to the task or any IPC related events. So all the tasks will be waiting for a specfic event to happen to start execution. This is called *Event Driven Programming*. A task which is waiting for an event is called in *BLOCKED STATE* . A task can be in *BLOCKED STATE* while waiting for two types of events
+
+* Time related event (Waiting for delay to complete, Waiting for timer to expire etc)
+* Waiting for an interrupt of a some data to arrive through IPC
 
