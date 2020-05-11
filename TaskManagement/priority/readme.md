@@ -47,3 +47,5 @@ To understand this, in previous example we will change the task priotiries and s
   
 ![Task1 == Task2]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/same_priority.jpg "Logo Title Text 1") 
 
+## Task1 is Given priority TWO and Task2 is given prioroty TWO (Both Tasks are given same priority)
+
