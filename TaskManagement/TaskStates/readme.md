@@ -28,3 +28,14 @@ Here the example where we added a small delay to both the tasks this allowed Tas
 
 ![alt text](https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/TaskStates/ouput.jpg "Logo Title Text 1") Removing Starvation of task using temporal delays
 
+## Suspended State
+The moment a task is created by using one of the Task craation APIs, the task will enter into the *list scheduled tasks*. This is the list  used by Scheduler to schedule the tasks. As long as a task is there in this list, the task will get scheduled. 
+
+Now let us say, a we want to remove  a task from this list of scheduled tasks, so that we can reduce the scheduling over head. For example a task which is used for Debugging need to be temporarly disabled for a long period of time, we can ask FreeRTOS to take the task out of the *list of scheduled tasks*. When task is removed from the list of scheduled task we can says that task is in *Suspended state*.
+
+The OS API used for suspending as task is *vTaskSuspend()* -> Removes the task from the schedulers list
+Simillarly the API to put the task back in the list of scheduled task is *vTaskResume()* - Add the task back to scheduler list
+
+This API is not used much only in special cases.
+
+
