@@ -44,3 +44,7 @@ Tasks that are in the Not Running state but are not Blocked or Suspended are sai
 ## State Transition Digaram
 
 ![alt text](https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/TaskStates/state_Transition_digram.jpg "Logo Title Text 1")  State Transition Diagram
+
+##  FreeRTOS API vTaskDelay() 
+In the previous example we have used the arduino SDK api called ***. delay()*** to temporarly put a task into BLOCKED STATE. The API that is recommeded by FreeRTOS for putting a task into BLOCKED STATE is  vTaskDelay() . The advantage of use  vTaskDelay()  is that we can specify delay is terms of Tick Interrupts, the periodic clock used by Scheduler to schedule tasks. This gives better control in the timing as we are depending the same clock used by the scheduler. But the salient point that need to keep in mind here is, it does not take the parameters in absolute time units like Seconds, milliseconds or Microseconds.
+
