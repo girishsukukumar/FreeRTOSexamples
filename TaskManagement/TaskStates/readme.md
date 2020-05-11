@@ -1,4 +1,5 @@
-#Task States (Different States in which a FreeRTOS task will be in)
+# Task States (Different States in which a FreeRTOS task will be in)
+
 At any point of time a task in FreeRTOS will be either in 
 *Running State
 *Not Running State.
