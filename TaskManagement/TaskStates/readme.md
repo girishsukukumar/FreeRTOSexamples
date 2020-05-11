@@ -56,3 +56,11 @@ pdMS_TO_TICKS(). This API takes one input which is time in milliseconds and conv
 
 For example 
 vTaskDelay( pdMS_TO_TICKS( 100 ) )  will keep the task in BLOCKED STATE for 100milliseconds
+
+[Using vTaskDelay() to solve starvation ](https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/TaskStates/TwoTaskvTaskDelay.ino)
+
+![alt text](https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/TaskStates/output2.jpg "Logo Title Text 1")  Output
+
+
+
+
