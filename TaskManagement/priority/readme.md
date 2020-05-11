@@ -17,3 +17,6 @@ priority—ensuring maximum design flexibility.
 #endif
 
 ```
+The scheduler will always ensure that the highest priority task that is able to run is the task selected to enter the Running state. 
+
+Let us execute the following example in this folder and see the output
