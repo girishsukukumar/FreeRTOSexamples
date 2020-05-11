@@ -23,4 +23,7 @@ Synchronization event in FreeRTOS are from, queues, binary semaphores, counting 
 
 Let us see how to use a simple temporal event (time related) to over come starvation in the previous example where Task1 was starving task2
 
+Here the example where we added a small delay to both the tasks this allowed Task1 and Task2 to execute in an alternate fashion
+[Using Delay to solve starvation ](https://www.google.com)
+
 
