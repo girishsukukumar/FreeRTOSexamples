@@ -26,7 +26,7 @@ In the previous example we will change the task priotiries and see the differenc
 ![Task1 > Task2 ]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/output.jpg
   "Logo Title Text 1")
   
-![Task2 > Task1 ]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/output1.jpg
+![Task2 > Task1 ]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/output2.jpg
   "Logo Title Text 1")
   
 ![Task1 == Task2]( https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/priority/output3.jpg
