@@ -3,7 +3,7 @@ TaskHandle_t   Task1 ;
 TaskHandle_t   Task2 ;
 #define PRIORITY_ONE 1
 #define PRIORITY_TWO 2
-
+#define TEN_MILLI_SECONDS 10 
 void setup() 
 {
     Serial.begin(115200);
@@ -36,7 +36,10 @@ void setup()
         for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
          {
             Serial.printf( "Task1 \n");
-            delay(10);
+            int ticks ;
+            ticks = pdMS_TO_TICKS(TEN_MILLI_SECONDS);
+            vTaskDelay(ticks);
+            Serial.printf("%d millseconds =  %d Ticks \n",TEN_MILLI_SECONDS, ticks);
          }
      }
 }
@@ -52,7 +55,9 @@ void myTaskTwo( void *pvParameters )
         for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
          {
             Serial.printf( "Task2 \n");
-            delay(10);
+            int ticks ;
+            ticks = pdMS_TO_TICKS(TEN_MILLI_SECONDS);
+            vTaskDelay(ticks);
          }
      }
 }
