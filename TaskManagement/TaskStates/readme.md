@@ -21,5 +21,6 @@ The Solution to this problem of starvation is, in the world of Real time systems
 
 Synchronization event in FreeRTOS are from, queues, binary semaphores, counting semaphores, mutexes, recursive mutexes, event groups and direct to task notifications.
 
+Let us see how to use a simple temporal event (time related) to over come starvation in the previous example where Task1 was starving task2
 
 
