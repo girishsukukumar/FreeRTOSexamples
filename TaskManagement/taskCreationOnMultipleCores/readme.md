@@ -6,7 +6,7 @@ on ESP32F
 ![alt text](https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/taskCreationOnMultipleCores/ESp32_block.jpg
 "Logo Title Text 1") Dual Core
 
-![alt text](https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/taskCreationOnMultipleCores/ESp32_block.jpg
+![alt text](https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/taskCreationOnMultipleCores/multi-core.jpg
  "Logo Title Text 1") Dual Core
 
 ___
