@@ -10,3 +10,9 @@ Common uses for the Idle task hook include:
 * Executing low priority, background, or continuous processing functionality. 
 * Measuring the amount of spare processing capacity. (The idle task will run only when all higher priority application tasks have no work to perform; so measuring the amount of processing time allocated to the idle task provides a clear indication of how much processing time is spare.) 
 * Placing the processor into a low power mode, providing an easy and automatic method of saving power whenever there is no application processing to be performed (although the power saving that can be achieved using this method is less than can be achieved by using the tick-less idle mode described in, Low Power Support). 
+
+## Application Specific Functionality in Idle Task
+
+PRogrammers can  add application specific functionality directly into the idle task through the use of an idle hook (or idle callback) function—a function that is called automatically by the idle task once per iteration of the idle task loop.  
+
+ ## How to write a application specific hook function for idle Task
