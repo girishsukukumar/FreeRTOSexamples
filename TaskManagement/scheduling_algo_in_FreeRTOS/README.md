@@ -43,3 +43,13 @@ the processor for longer time resulting in starvation of other tasks
 
 
 ##  Co-operative Scheduling 
+
+When the following configuration is used FreeRTOS will use a different scheduling method which 
+is Co-operative Scheduling. 
+
+configUSE_PREEMPTION 0 
+configUSE_TIME_SLICING Any value 
+
+When the co-operative scheduler is used, a context switch will only occur when the Running state task 
+enters the Blocked state, or the Running state task explicitly yields (manually requests a re-schedule) 
+by calling taskYIELD().  Tasks are never pre-empted, so time slicing cannot be used. 
