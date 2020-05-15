@@ -11,4 +11,13 @@ These Kernal Objects are dynamically created and destroyed during run time.  Eac
 FreeRTOS allocates RAM each time a kernel object is created, and frees RAM each time a kernel object is deleted.  This policy reduces design and planning effort, simplifies the API, and minimizes the RAM footprint. 
 
 ## 2. Scope of Dynamic Memory Allocation in FreeRTOS
+Memory can be allocated using the standard C library malloc() and free() functions, but they may not be suitable, or appropriate, for one or more of the following reasons: 
+ They are not always available on small embedded systems. 
+ Their implementation can be relatively large, taking up valuable code space. 
+ They are rarely thread-safe. 
+ They are not deterministic; the amount of time taken to execute the functions will differ from call to call. 
+ They can suffer from fragmentation1.   
+ They can complicate the linker configuration. 
+ They can be the source of difficult to debug errors if the heap space is allowed to grow into memory used by other variables.  
+
 ## 3. Memory Allocation schemes in FreeRTOS
