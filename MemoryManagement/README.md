@@ -29,10 +29,10 @@ Unlike in Linux,  pvPortMalloc() and vPortFree() are not a single implementation
 
 ## 4. Memory allocation scheme in details
 ### 4.1 Heap_1
-### 4.1 Heap_2
-### 4.1 Heap_3
-### 4.1 Heap_4
-### 4.1 Heap_5
+### 4.2 Heap_2
+### 4.3 Heap_3
+### 4.4 Heap_4
+### 4.5 Heap_5
 
 
 
