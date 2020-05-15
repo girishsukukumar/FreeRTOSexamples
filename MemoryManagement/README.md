@@ -27,6 +27,12 @@ pvPortMalloc() and vPortFree() are public functions, so can also be called from 
 
 Unlike in Linux,  pvPortMalloc() and vPortFree() are not a single implementation for memory allocation and freeing.  Instead there are five different implementations of these apis which are available in FreeRTOS. Each implementation is used for differnt contexts. Each implmentation is implemented in five different source files, heap_1.c, heap_2.c, heap_3.c, heap_4.c and heap_5.c. Each one of them are five different  memory allocation schemes in FreeRTOS.
 
+## 4. Memory allocation scheme in details
+### 4.1 Heap_1
+### 4.1 Heap_2
+### 4.1 Heap_3
+### 4.1 Heap_4
+### 4.1 Heap_5
 
 
 
