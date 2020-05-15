@@ -29,6 +29,7 @@ Unlike in Linux,  pvPortMalloc() and vPortFree() are not a single implementation
 
 ## 4. Memory allocation scheme in details
 ### 4.1 Heap_1
+        This is a very basic version which implement only pvPortMalloc() and does not implements pvPortFree(). This is designed for applications which allocates all the memory in the beginning and does not allocate memory after or delete a task. In such apps, there  is no need to allocate memory and free it later and again allocate. These are meant for time and  critical application which uses a very simple and flat memory model which is very deterministic. They cannot handle a memory allocation failure during the start.  Hence there is not concept of fragmentation of memory in this model. 
 ### 4.2 Heap_2
 ### 4.3 Heap_3
 ### 4.4 Heap_4
