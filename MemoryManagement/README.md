@@ -32,8 +32,12 @@ Unlike in Linux,  pvPortMalloc() and vPortFree() are not a single implementation
 This is a very basic version which implement only pvPortMalloc() and does not implements pvPortFree(). This is designed for applications which allocates all the memory in the beginning and does not allocate memory after or delete a task. In such apps, there  is no need to allocate memory and free it later and again allocate. These are meant for time and  critical application which uses a very simple and flat memory model which is very deterministic. They cannot handle a memory allocation failure during the start.  Hence there is not concept of fragmentation of memory in this model. 
 
 The heap_1 allocation scheme subdivides a simple array of memory into smaller blocks, as calls to pvPortMalloc() are made.  The array is called the FreeRTOS heap.   The total size (in bytes) of the array is set by the definition configTOTAL_HEAP_SIZE within FreeRTOSConfig.h.  Defining a large array in this manner can make the application appear to consume a lot of RAM—even before any memory has been allocated from the array. 
-![alt text](https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/TaskManagement/simpleTaskCreation/example1.jpg
+![alt text](https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/MemoryManagement/heap_1_1.jpg
  "Logo Title Text 1")
+ #### Before creating a task and after creating the first task
+ ![alt text](https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/MemoryManagement/heap_1_1.jpg
+ "Logo Title Text 1")
+ #### After creating two tasks
 
 
 ### 4.2 Heap_2
