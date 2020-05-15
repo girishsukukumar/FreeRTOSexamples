@@ -22,3 +22,12 @@ The reason why these functions cannot be used in RTOS is because
 * They can be the source of difficult to debug errors if the heap space is allowed to grow into memory used by other variables.  
 
 ## 3. Memory Allocation schemes in FreeRTOS
+FreeRTOS is when need to  memory it wont use malloc(), instead it calls pvPortMalloc().  FOr freeing memory instead of calling free(), it calls vPortFree().  pvPortMalloc() has the same prototype as the standard C library malloc() function, and vPortFree() has the same prototype as the standard C library free() function. 
+pvPortMalloc() and vPortFree() are public functions, so can also be called from application code. 
+
+Unlike in Linux,  pvPortMalloc() and vPortFree() are not a single implementation for memory allocation and freeing.  Instead there are five different implementations of these apis which are available in FreeRTOS. Each implementation is used for differnt contexts. Each implmentation is implemented in five different source files, heap_1.c, heap_2.c, heap_3.c, heap_4.c and heap_5.c. Each one of them are five different  memory allocation schemes in FreeRTOS.
+
+
+
+
+
