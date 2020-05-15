@@ -3,7 +3,7 @@
 ## [3. Task Priorites ](https://github.com/girishsukukumar/FreeRTOSexamples/tree/master/TaskManagement/priority)
 ## [4. Different States of a Task](https://github.com/girishsukukumar/FreeRTOSexamples/tree/master/TaskManagement/TaskStates)
 ## [5. How to create Periodic Task](https://github.com/girishsukukumar/FreeRTOSexamples/tree/master/TaskManagement/PeriodicTaskCreation)
-## [6. Scheduling Algorithms in FreeRTOS (https://github.com/girishsukukumar/FreeRTOSexamples/tree/master/TaskManagement/scheduling_algo_in_FreeRTOS)
+## [6. Scheduling Algorithms in FreeRTOS] (https://github.com/girishsukukumar/FreeRTOSexamples/tree/master/TaskManagement/scheduling_algo_in_FreeRTOS)
 
 
 ___
