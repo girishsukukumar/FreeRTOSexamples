@@ -6,7 +6,7 @@ Kernal Objects which are frequently used in FREERTOS are:
 * Semaphores
 * Event groups.  
 
-These Kernal Objects are dynamically created and destroyed during run time.  Each Kernal Object,  needs memory. When we says Kernal Objects are dynamically created it means the memory needed for these Kernal Objects are dynamically allocated at run-time, they are not allocated at the time of Compile Time.
+These Kernal Objects are dynamically created and destroyed during run time.  Each Kernal Object,  needs memory. When we says Kernal Objects are dynamically created it means the memory needed for these Kernal Objects are dynamically allocated at run-time ie when we call the respective API eg [ xTaskCreate () etc.] they are not allocated at the time of Compile Time.
 
 FreeRTOS allocates RAM each time a kernel object is created, and frees RAM each time a kernel object is deleted.  This policy reduces design and planning effort, simplifies the API, and minimizes the RAM footprint. 
 
