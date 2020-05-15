@@ -35,7 +35,7 @@ The heap_1 allocation scheme subdivides a simple array of memory into smaller bl
 ![alt text](https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/MemoryManagement/heap_1_1.jpg
  "Logo Title Text 1")
  #### Before creating a task and after creating the first task
- ![alt text](https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/MemoryManagement/heap_1_1.jpg
+ ![alt text](https://github.com/girishsukukumar/FreeRTOSexamples/blob/master/MemoryManagement/heap_1_2.jpg
  "Logo Title Text 1")
  #### After creating two tasks
 
