@@ -126,6 +126,11 @@ BaseType_t xQueueSendToFrontFromISR( QueueHandle_t xQueue,
 ```
 
 
-
+```
+BaseType_t xQueueSendToBackFromISR( QueueHandle_t xQueue,                                      
+                                    void *pvItemToQueue,                   
+                                    BaseType_t *pxHigherPriorityTaskWoken); 
+```
+ 
 ## MailBox
 MailBox is a term used for inter task communication in Real Time OS. In FREERTOS a queue of unit length 
