@@ -39,5 +39,13 @@ BaseType_t xQueueSendToBack(QueueHandle_t xQueue,
 
 In both the cases, the first parameter is the handle to the queue, second parameter is the data that need to be added into the queue. In case queue is full, the task cannot write so it has to wait, this parameter specifies the amount of time the task need to wait before the queue has a space to write. In case this parameter is zero, the writting task will not wait.
 
+To receive data from a queue a task has to use the following API
+
+```
+BaseType_t xQueueReceive( QueueHandle_t xQueue,                           
+                          void * const pvBuffer,                           
+                          TickType_t xTicksToWait ); 
+```
+
 ## MailBox
 MailBox is a term used for inter task communication in Real Time OS. In FREERTOS a queue of unit length 
