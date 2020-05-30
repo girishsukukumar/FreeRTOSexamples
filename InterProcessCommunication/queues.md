@@ -4,6 +4,8 @@ In FreeRTOS we do not use the Term IPC or interprocess communication, rather we 
 2. Interrupt to Task Communication
 3. Task to Interrupt Communication
 
+In FreeRTOS we have queues, Binary Semaphores and Counting semaphores for COmmunication Mechanisum.
+
 A Queue in FreeRTOS is very simillar to the queues what we had learned in data structure. It s FIFO list with a small difference. It is pretty easy to use and code the easy to understand.
 
 A queue can hold a finite number of fixed size data items.  The maximum number of items a queue can hold is called its ‘length’.  Both the length and the size of each data item are set when the queue is created. 
