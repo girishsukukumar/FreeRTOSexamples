@@ -13,9 +13,9 @@ Queues are normally used as First In First Out (FIFO) buffers, where data is wri
 Queues are objects in their own right that can be accessed by any task or ISR that knows of their existence.  Any number of tasks can write to the same queue, and any number of tasks can read from the same queue.  In practice it is very common for a queue to have multiple writers, but much less common for a queue to have multiple readers. 
 
 A queue is created using the API  xQueueCreate()  it Returns a queue handle
-'''
+```
 QueueHandle_t xQueueCreate( UBaseType_t uxQueueLength, UBaseType_t uxItemSize ); 
-''''
+```
 
 ## MailBox
 MailBox is a term used for inter task communication in Real Time OS. In FREERTOS a queue of unit length 
