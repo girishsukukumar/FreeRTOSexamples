@@ -22,11 +22,16 @@ One unique property of the queues in FreeRTOS  where it differes from the tradit
 
 To add an element to the front of queue:
 ```
-BaseType_t xQueueSendToFront( QueueHandle_t xQueue,                               const void * pvItemToQueue,                               TickType_t xTicksToWait );
+BaseType_t xQueueSendToFront( QueueHandle_t xQueue, 
+                              const void * pvItemToQueue,
+                              TickType_t xTicksToWait );
 ```
 To add an element to the back of the queue
+
 ```
-BaseType_t xQueueSendToBack( QueueHandle_t xQueue,                              const void * pvItemToQueue,                              TickType_t xTicksToWait ); 
+BaseType_t xQueueSendToBack(QueueHandle_t xQueue,
+                            const void * pvItemToQueue,
+                            TickType_t xTicksToWait ); 
 ```
 
 ## MailBox
