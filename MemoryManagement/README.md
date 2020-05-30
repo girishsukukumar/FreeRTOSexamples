@@ -43,6 +43,8 @@ The heap_1 allocation scheme subdivides a simple array of memory into smaller bl
 Heap_2.c works by subdividing an array that is dimensioned by configTOTAL_HEAP_SIZE.  It uses a best fit algorithm to allocate memory it allows freering of memory .  Again, the array is statically declared, so will make the application appear to consume a lot of RAM, even before any memory from the array has been assigned. This model is discoutinued at is used only for backward compatability. 
 
 ### 4.3 Heap_3
+Heap implemeted  library malloc() and free() functions. Just like in stadard C  the size of the heap is defined by the linker configuration, and the configTOTAL_HEAP_SIZE is not used.
+The calls malloc() and free() are thread-safe, but the thread saftey is achived by temporarily suspending the Scheduler.  
 ### 4.4 Heap_4
 ### 4.5 Heap_5
 
