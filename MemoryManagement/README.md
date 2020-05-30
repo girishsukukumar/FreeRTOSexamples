@@ -50,6 +50,23 @@ The calls malloc() and free() are thread-safe, but the thread saftey is achived 
 heap_4 works by subdividing an array into smaller blocks. Key difference here is  it uses a first fit algorithm to allocate memory.
 One major advantage of Heap_4 is it reduces Memory Fragmentation. To achive this it combines, pieces of free memory blocks in larger pieces.
 
+IT uses a first fit algorithm to allocate memory.  When pvPortMalloc() it called, it searches for the  first free block of memory that is large enough to hold the requested  number of bytes. Then "Chops out" the requsted number of bytes from the free block,and balance amount of free memory is marked as free block. To demonstarte this
+ Let us assume at  a give point there are 
+ 1. Three blocks of free memory in the system. 30 Bytes, 200 bytes and 310 bytes.
+ 2. Now call to pvPortMalloc() is made for 50 bytes of memory.
+ 3. The system will look at the the first block which is 30 bytes which is of course not enough. Then it looks at the next byte which is 200 bytes, it cuts out 50 bytes from this block and leave the rest 150 bytes as free memory. 
+ 4. Now another call to pvPortMalloc() is made for 100 bytes.
+ 5. System will look in the first block, skip it and then look at the next block which is 150 bytes and "cuts out" 100 bytes and mark the balance 50 bytes as free. 
+ This way the system keeps allocating memory.
+ The same memory scheme looks for ajacent free memory blocks and merge them into  single block to make them into a bigger block.
+ In the above example
+ Let us say the first the 100 bytes memroy is freed. That point of there will be two blocks of memory.
+ (a) the one just now freed which is 100 bytes
+ (b) the 50 bytes which was marked as free earlier.
+ Now the memory allocation scheme will merge the 50 bytes free block and 100 bytes free block into one and declare as a single 150 byte block.
+ 
+ 
+
 ### 4.5 Heap_5
 
 
