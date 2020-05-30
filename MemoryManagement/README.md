@@ -45,7 +45,11 @@ Heap_2.c works by subdividing an array that is dimensioned by configTOTAL_HEAP_S
 ### 4.3 Heap_3
 Heap implemeted  library malloc() and free() functions. Just like in stadard C  the size of the heap is defined by the linker configuration, and the configTOTAL_HEAP_SIZE is not used.
 The calls malloc() and free() are thread-safe, but the thread saftey is achived by temporarily suspending the Scheduler.  
+
 ### 4.4 Heap_4
+heap_4 works by subdividing an array into smaller blocks. Key difference here is  it uses a first fit algorithm to allocate memory.
+One major advantage of Heap_4 is it reduces Memory Fragmentation. To achive this it combines, pieces of free memory blocks in larger pieces.
+
 ### 4.5 Heap_5
 
 
