@@ -47,5 +47,30 @@ BaseType_t xQueueReceive( QueueHandle_t xQueue,
                           TickType_t xTicksToWait ); 
 ```
 
+An Example of Task to Task communication with Queues
+```
+static void vSenderTask( void *pvParameters ) 
+{ 
+     int32_t lValueToSend; BaseType_t xStatus; 
+ 
+      lValueToSend = ( int32_t ) pvParameters; 
+ 
+    /* As per most tasks, this task is implemented within an infinite loop. */     
+
+    while(1)     
+    {         
+         xStatus = xQueueSendToBack( xQueue, &lValueToSend, 0 ); 
+ 
+        if( xStatus != pdPASS )         
+        {             
+          /* The send operation could not complete because the queue was full -             
+             this must be an error as the queue should never contain more than              
+             one item! 
+           */             
+           vPrintString( "Could not send to the queue.\r\n" );         
+        }     
+    } 
+} 
+```
 ## MailBox
 MailBox is a term used for inter task communication in Real Time OS. In FREERTOS a queue of unit length 
