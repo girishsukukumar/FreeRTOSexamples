@@ -103,5 +103,19 @@ static void vReceiverTask( void *pvParameters )
 } 
 ```
 
+```
+int main( void ) 
+{         
+    xQueue = xQueueCreate( 5, sizeof( int32_t ) ); 
+ 
+    if( xQueue != NULL )     
+    {       
+
+      xTaskCreate( vSenderTask, "Sender1", 1000, ( void * ) 100, 1, NULL );         
+      xTaskCreate( vSenderTask, "Sender2", 1000, ( void * ) 200, 1, NULL ); 
+     }
+}
+```
+
 ## MailBox
 MailBox is a term used for inter task communication in Real Time OS. In FREERTOS a queue of unit length 
