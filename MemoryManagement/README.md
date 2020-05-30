@@ -68,7 +68,6 @@ IT uses a first fit algorithm to allocate memory.  When pvPortMalloc() it called
  
 
 ### 4.5 Heap_5
-
-
-
+Heap_5 works very simillar to Heap_4 but over comes some of the limitation which Heap_4 has. Heap_4 looks for a block which is either equal to the size of the requested number of bytes or larger than the requested amount.  Heap_5 also works in a simillar way but it has tbe ability to pick up the requested memory from multiple free blocks, in case the requested amount is not available from a single free block
+## Memory Management Utility Functions
 
