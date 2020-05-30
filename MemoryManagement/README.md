@@ -68,6 +68,16 @@ IT uses a first fit algorithm to allocate memory.  When pvPortMalloc() it called
  
 
 ### 4.5 Heap_5
-Heap_5 works very simillar to Heap_4 but over comes some of the limitation which Heap_4 has. Heap_4 looks for a block which is either equal to the size of the requested number of bytes or larger than the requested amount.  Heap_5 also works in a simillar way but it has tbe ability to pick up the requested memory from multiple free blocks, in case the requested amount is not available from a single free block
-## Memory Management Utility Functions
+Heap_5 works very simillar to Heap_4 but over comes some of the limitation which Heap_4 has. Heap_4 looks for a block which is either equal to the size of the requested number of bytes or larger than the requested amount.  Heap_5 also works in a simillar way but it has tbe ability to pick up the requested memory from multiple free blocks, in case the requested amount is not available from a single free block.
 
+## Memory Management Utility Functions
+FreeRTOS is designed to run in Microcontrollers with Limited memory. Mostly it is targetted for Microcontroller which are designed as a SoC, hence during the development, testing and field deploymnet stage of any Real time applicaiton, is a  MUST to know the amout of free RAM available. So a dedicated API is implemented for this purpose.
+ xPortGetFreeHeapSize() 
+All call to this API returns the number of bytes which are unallocated in the Heap at the time it is called. 
+ 
+During the execution cycle of an Real time System, if we call  *xPortGetFreeHeapSize()* it will return different values. THis is becuase the memeory needs of the system will vary from time to time. Some times there will be more amount of free memory and at other times there will be less amount of free memory. We can have to keep calling this function to get big picture of memory consumption pattern. For example a system designer wants to know what was  the lowest amout of free memory that was avaialble during the last 24 hours or 48 hours of operation. For this applicaiton need to make periodic calls to xPortGetFreeHeapSize() and keep a record.
+
+But this is not an effective way to know the status of free memory becuase each call to xPortGetFreeHeapSize() will results in additional CPU resource and we have to take this execution time of this function call also into consideration during the system design time.
+So there is another API which exactly solves this problem which is *xPortGetMinimumEverFreeHeapSize()*
+When this API is called, it returns the number of unallocated bytes ever existed in the system since the application was started or since the system was powered on Till now. 
+Which means over a period of time if we call this API it give us a complete picture of the amount of Free Heap that was available. It also answer the question whether the system has ran out of heap at any point of time or not. 
