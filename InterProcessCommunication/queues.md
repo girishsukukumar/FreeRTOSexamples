@@ -15,6 +15,18 @@ Queues are objects in their own right that can be accessed by any task or ISR th
 A queue is created using the API  xQueueCreate()  it Returns a queue handle
 ```
 QueueHandle_t xQueueCreate( UBaseType_t uxQueueLength, UBaseType_t uxItemSize ); 
+uxQueueLength : The maximum number of items that the queue being created can hold 
+uxItemSize : The size in bytes of each data item that can be stored in the queue. 
+```
+One unique property of the queues in FreeRTOS  where it differes from the traditonal queues is, in A traditional queue, you can only add a new element to the back of the queue and not any where else. Where in FreeRTOS you can add an element either to the back of the queue or to front of QUEUE.
+
+To add an element to the front of queue:
+```
+BaseType_t xQueueSendToFront( QueueHandle_t xQueue,                               const void * pvItemToQueue,                               TickType_t xTicksToWait );
+```
+To add an element to the back of the queue
+```
+BaseType_t xQueueSendToBack( QueueHandle_t xQueue,                              const void * pvItemToQueue,                              TickType_t xTicksToWait ); 
 ```
 
 ## MailBox
