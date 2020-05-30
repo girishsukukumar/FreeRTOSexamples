@@ -72,5 +72,35 @@ static void vSenderTask( void *pvParameters )
     } 
 } 
 ```
+
+```
+static void vReceiverTask( void *pvParameters )
+{ /* Declare the variable that will hold the values received from the queue. */ int32_t lReceivedValue; BaseType_t xStatus; const TickType_t xTicksToWait = pdMS_TO_TICKS( 100 ); 
+ 
+    /* This task is also defined within an infinite loop. */     
+    for( ;; )     
+    {         
+         /* This call should always find the queue empty because this task will         
+            immediately remove any data that is written to the queue. 
+          */         
+         if( uxQueueMessagesWaiting( xQueue ) != 0 )         
+         {             
+            vPrintString( "Queue should have been empty!\r\n" );         
+         } 
+ 
+         xStatus = xQueueReceive( xQueue, &lReceivedValue, xTicksToWait ); 
+ 
+        if( xStatus == pdPASS )   		
+        {             
+          vPrintStringAndNumber( "Received = ", lReceivedValue );         
+        }         
+        else         
+        {             
+            vPrintString( "Could not receive from the queue.\r\n" );         
+        }     
+    } 
+} 
+```
+
 ## MailBox
 MailBox is a term used for inter task communication in Real Time OS. In FREERTOS a queue of unit length 
